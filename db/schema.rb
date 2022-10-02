@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_111524) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dog_house_id"], name: "index_reviews_on_dog_house_id"
+  t.belongs_to :dog_house, null: false, foreign_key: true
   end
 
   add_foreign_key "reviews", "dog_houses"
